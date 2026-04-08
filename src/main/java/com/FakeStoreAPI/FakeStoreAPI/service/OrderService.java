@@ -99,7 +99,7 @@ public class OrderService {
                 .orElseThrow(() -> new IllegalArgumentException("Order not found"));
 
         if (Objects.isNull(status)) {
-            order.setStatus(OrderStatus.PAID);
+            status = OrderStatus.PAID;
         }
 
         if (status == OrderStatus.PAID) {
